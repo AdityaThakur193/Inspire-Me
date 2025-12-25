@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>InspireMe - Random Quote Generator</title>
+  <!-- Google Fonts -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Delius&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Background Circles -->
+  <div class="background-circles" aria-hidden="true">
+    <div class="circle circle1"></div>
+    <div class="circle circle2"></div>
+    <div class="circle circle3"></div>
+    <div class="circle circle4"></div>
+  </div>
+
+  <button id="themeToggle" aria-label="Toggle light or dark theme" title="Toggle light or dark theme">
+    🌙 Toggle Theme
+  </button>
+
+  <main id="content" role="main" aria-live="polite" aria-atomic="true">
+    <header id="appHeader">
+      <h1 id="appTitle">Inspire Me</h1>
+      <p id="description">Click below to brighten your day with inspiring quotes!</p>
+    </header>
+
+    <section id="quoteBox" tabindex="0" aria-live="polite" aria-atomic="true" role="region">
+      <div id="quoteContent">Default inspiring quote will appear here.</div>
+      <div id="quoteAuthor" aria-label="Author of the quote"></div>
+    </section>
+
+    <div id="loading" role="alert" aria-hidden="true">
+      <span class="visually-hidden">Loading quotes...</span>
+      Loading...
+    </div>
+
+    <div class="controls" aria-label="Quote controls">
+      <button id="generateBtn" class="controlBtn" aria-label="Generate new quote">
+        <i class="fas fa-sync-alt"></i> New Quote
+      </button>
+      <button id="copyBtn" class="controlBtn" aria-label="Copy quote to clipboard">
+        <i class="fas fa-clipboard"></i> Copy
+      </button>
+
+      <select id="languageSelect" class="controlSelect" aria-label="Select quote language">
+        <option value="en" selected>English</option>
+        <option value="hi">Hindi</option>
+      </select>
+    </div>
+
+    <div id="shareButtons" aria-label="Share quote on social media">
+      <button class="shareBtn" id="shareTwitter" aria-label="Share quote on Twitter" title="Share on Twitter">
+        <i class="fab fa-twitter"></i>
+      </button>
+      <button class="shareBtn" id="shareFacebook" aria-label="Share quote on Facebook" title="Share on Facebook">
+        <i class="fab fa-facebook-f"></i>
+      </button>
+      <button class="shareBtn" id="shareLinkedIn" aria-label="Share quote on LinkedIn" title="Share on LinkedIn">
+        <i class="fab fa-linkedin-in"></i>
+      </button>
+      <button class="shareBtn" id="shareWhatsApp" aria-label="Share quote on WhatsApp" title="Share on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+      </button>
+    </div>
+
+    <p id="copyMsg" role="alert" aria-live="assertive">Quote copied to clipboard!</p>
+  </main>
+
+  <!-- Confetti container -->
+  <div class="confetti-wrapper" aria-hidden="true"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
